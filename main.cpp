@@ -39,10 +39,9 @@ int main(int argc, const char * argv[]) {
         myFile.close();
     }
     cout << "Done." << endl << endl;
-    int count = 0;
-    while (count < 5)
+    string word;
+    while (word != "quit")
     {
-        string word;
         cout << "Enter word: ";
         cin >> word;
         
@@ -54,8 +53,6 @@ int main(int argc, const char * argv[]) {
         
         elapsed_secs = double(end - start) / CLOCKS_PER_SEC;
         cout << "Results found in "<< elapsed_secs << "s" << endl << endl;
-        
-        count++;
     }
     return 0;
 }
